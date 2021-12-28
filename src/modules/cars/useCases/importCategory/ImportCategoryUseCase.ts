@@ -13,7 +13,7 @@ class ImportCategoryUseCase {
     constructor(
         @inject("CategoriesRepository")
         private categoriesRepository: ICategoriesRepository
-    ) { }
+    ) {}
 
     private loadCategories(
         file: Express.Multer.File
