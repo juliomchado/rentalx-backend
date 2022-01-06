@@ -14,14 +14,14 @@
 
 **Requisitos funcionais**
 
-[] - Deve ser possível listar todos os carros disponíveis.
-[] - Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
-[] - Deve ser possível listar todos os carros disponíveis pelo nome da marca.
-[] - Deve ser possível listar todos os carros disponíveis pelo nome do carro.
+[x] - Deve ser possível listar todos os carros disponíveis.
+[x] - Deve ser possível listar todos os carros disponíveis pelo nome da categoria.
+[x] - Deve ser possível listar todos os carros disponíveis pelo nome da marca.
+[x] - Deve ser possível listar todos os carros disponíveis pelo nome do carro.
 
 **Regra de negócio**
 
-[] - O usuário não precisa estar logado no sistema para listar os carros.
+[x] - O usuário não precisa estar logado no sistema para listar os carros.
 
 # Cadastro de Especificação no carro
 
