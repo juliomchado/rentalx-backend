@@ -28,6 +28,12 @@ class SpecificationsRepository implements ISpecificationsRepository {
         return specification;
     }
 
+    async list(): Promise<Specification[]> {
+        const specifications = await this.repository.find();
+
+        return specifications;
+    }
+
     async findByName(name: string): Promise<Specification> {
         const specification = await this.repository.findOne({ name });
 
