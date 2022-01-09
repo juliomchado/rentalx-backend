@@ -23,7 +23,7 @@ class RentalsRepository implements IRentalsRepository {
             user_id
         });
 
-        await this.repository.save({ car_id, expected_return_date, user_id });
+        await this.repository.save(rental);
 
         return rental;
     }
