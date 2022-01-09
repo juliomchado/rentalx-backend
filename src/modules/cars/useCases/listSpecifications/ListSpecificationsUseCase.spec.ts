@@ -1,6 +1,5 @@
 import { SpecificationsRepositoryInMemory } from "@modules/cars/repositories/in-memory/SpecificationsRepositoryInMemory";
 
-import { CreateSpecificationUseCase } from "../createSpecification/CreateSpecificationUseCase";
 import { ListSpecificationsUseCase } from "./ListSpecificationsUseCase";
 
 let specificationsRepositoryInMemory: SpecificationsRepositoryInMemory;
