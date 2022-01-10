@@ -181,7 +181,7 @@
                 }
             }
         },
-        "cars": {
+        "/cars": {
             "post": {
                 "tags": [
                     "Cars"
@@ -195,7 +195,7 @@
                                 "$ref": "#/definitions/Car"
                             }
                         }
-                    } 
+                    }
                 },
                 "responses": {
                     "201": {
@@ -203,6 +203,54 @@
                     },
                     "400": {
                         "description": "Car already exists"
+                    }
+                }
+            }
+        },
+        "/cars/images/{id}": {
+            "post": {
+                "tags": [
+                    "Cars"
+                ],
+                "summary": "Upload images",
+                "description": "Upload images",
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "id": "path",
+                        "description": "Car id",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "images": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "binary"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
                     }
                 }
             }
@@ -232,7 +280,7 @@
                 "daily_reate": {
                     "type": "number"
                 },
-                "license_plate":{
+                "license_plate": {
                     "type": "string"
                 },
                 "fine_amount": {
