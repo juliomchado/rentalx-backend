@@ -1,5 +1,4 @@
 import { Response, Request } from "express";
-import { resolve } from "path";
 import { container } from "tsyringe";
 
 import { DevolutionRentalUseCase } from "./DevolutionRentalUseCase";
