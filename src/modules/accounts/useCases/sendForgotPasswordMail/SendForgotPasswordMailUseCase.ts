@@ -14,12 +14,12 @@ class SendForgotPasswordMailUseCase {
     constructor(
         @inject("UsersRepository")
         private usersRepository: IUsersRepository,
+        @inject("UsersTokensRepository")
+        private usersTokensRepository: IUsersTokensRepository,
         @inject("DayjsDateProvider")
         private dayjsDateprovider: IDateProvider,
-        @inject("EtherealMailProvider")
-        private mailProvider: IMailProvider,
-        @inject("UsersTokensRepository")
-        private usersTokensRepository: IUsersTokensRepository // @inject("SendForgotPasswordMailRepository") // private sendForgotPasswordMailRepository: ISendForgotPasswordMailRepository
+        @inject("MailProvider")
+        private mailProvider: IMailProvider
     ) {}
 
     async execute(email: string) {
